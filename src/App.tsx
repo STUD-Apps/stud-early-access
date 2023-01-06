@@ -27,7 +27,7 @@ const formData = {
 const options = [
   { label: "A student", value: "Medical Student" },
   { label: "A health professional", value: "Health Professional" },
-  { label: "Just likes to learn", value: "Other" },
+  { label: "Someone who just likes to learn", value: "Other" },
 ];
 
 const App: React.FunctionComponent = () => {
@@ -195,7 +195,7 @@ const App: React.FunctionComponent = () => {
                       htmlFor="occupation"
                       className="font-bold font-gotham text-lg leading-3"
                     >
-                      You are
+                      You are?
                     </label>
                     <Radio.Group
                       id="occupation"
