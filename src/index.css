@@ -1,0 +1,51 @@
+@import "~antd/dist/reset.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Gotham";
+  src: url("./assets/GothamBook.ttf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Gotham-Bold";
+  src: url("./assets/GothamBold.otf");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Gotham-Medium";
+  src: url("./assets/GothamMedium.ttf");
+  font-weight: 500;
+}
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.hero {
+  object-position: 1rem;
+}
+
+#name {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+}
+
+@media only screen and (min-width: 1220px) {
+  #name {
+    flex-direction: row;
+    row-gap: 2rem;
+  }
+}
