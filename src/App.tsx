@@ -92,7 +92,7 @@ const App: React.FunctionComponent = () => {
               </h2>
             </div>
             <span className="text-center">
-              Be the first to get access when we launch!
+              Be the one of the first to get on-boarded when we go live!
             </span>
           </div>
         </div>
@@ -115,7 +115,9 @@ const App: React.FunctionComponent = () => {
                 <span className="text-[#2E3192]"> STUD.</span>
               </h2>
             </div>
-            <span>Be the first to get access when we launch!</span>
+            <span>
+              Be the one of the first to get on-boarded when we go live!
+            </span>
           </div>
           <Formik
             initialValues={formInitialValues}
