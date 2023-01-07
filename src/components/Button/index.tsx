@@ -10,7 +10,9 @@ const Button: React.FunctionComponent<{
 }> = ({ onClick, label, type, loading, disabled }) => {
   return (
     <button
-      className="w-full text-center rounded-xl hover:bg-[#6c6cbd]/80 transition-all py-4 bg-[#6c6cbd] font-gotham_bold text-base text-white"
+      className={`w-full text-center rounded-xl hover:bg-[#6c6cbd]/80 ${
+        disabled || loading ? "hover:bg-[#6c6cbd]/80" : "bg-[#6c6cbd]"
+      } transition-all py-4 font-gotham_bold text-base text-white`}
       disabled={disabled || loading}
       type={type}
       onClick={() => {
