@@ -130,7 +130,11 @@ const App: React.FunctionComponent = () => {
                   toast.error("You already submitted a response!");
                   setLoading(false);
                   return;
-                } else {
+                } else if (
+                  !values.firstName ||
+                  !values.lastName ||
+                  !values.email
+                ) {
                   if (!values.firstName) {
                     setFieldError("firstName", "Required");
                   }
@@ -142,6 +146,8 @@ const App: React.FunctionComponent = () => {
                   if (!values.email) {
                     setFieldError("email", "Required");
                   }
+                  setLoading(false);
+                } else {
                   await createEarlyAccessEntry({ ...values, occupation });
                   toast(
                     "We have received your entry! Welcome to the STUD community."
@@ -161,7 +167,7 @@ const App: React.FunctionComponent = () => {
             }}
             validationSchema={formValidationSchema}
           >
-            {({ handleSubmit, errors }) => (
+            {({ handleSubmit, errors, values }) => (
               <Form>
                 <div className="w-full flex flex-col items-center gap-y-8">
                   <div
@@ -224,6 +230,12 @@ const App: React.FunctionComponent = () => {
                       type="submit"
                       onClick={handleSubmit}
                       loading={loading}
+                      disabled={
+                        loading ||
+                        !values.firstName ||
+                        !values.lastName ||
+                        !values.email
+                      }
                     />
                   </div>
                 </div>
