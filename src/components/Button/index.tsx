@@ -11,7 +11,7 @@ const Button: React.FunctionComponent<{
   return (
     <button
       className={`w-full text-center rounded-xl hover:bg-[#6c6cbd]/80 ${
-        disabled || loading ? "hover:bg-[#6c6cbd]/80" : "bg-[#6c6cbd]"
+        disabled || loading ? "bg-[#6c6cbd]/80" : "bg-[#6c6cbd]"
       } transition-all py-4 font-gotham_bold text-base text-white`}
       disabled={disabled || loading}
       type={type}
